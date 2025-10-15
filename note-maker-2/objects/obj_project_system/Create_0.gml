@@ -5,4 +5,3 @@ global.chebo = {
 	global_note_speed: 1,
 	note: [],
 };
-global.music = -1;
