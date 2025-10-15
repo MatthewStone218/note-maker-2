@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_system",
+  "%Name":"obj_music_system",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_system",
+  "name":"obj_music_system",
   "overriddenProperties":[],
   "parent":{
     "name":"system",

@@ -10,8 +10,4 @@ function click(){
 		room_goto(rm_project);
 		return;
 	}
-	create_project(_file);
-	load_project(_file);
-	room_goto(rm_project);
-	return;
 }
