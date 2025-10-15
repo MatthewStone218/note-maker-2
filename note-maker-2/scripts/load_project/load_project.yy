@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"import_music",
+  "%Name":"load_project",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"import_music",
+  "name":"load_project",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -1,6 +1,6 @@
 // v2.3.0에 대한 스크립트 어셋 변경됨 자세한 정보는
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 참조
-function import_music(path){
+function load_music(path){
 	var _file = buffer_load(path);
 	var _sample_rate = buffer_peek(_file, 24, buffer_u32);
 	var _audio_bits = buffer_peek(_file, 34, buffer_u16);
