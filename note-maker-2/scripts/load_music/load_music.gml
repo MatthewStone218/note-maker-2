@@ -4,8 +4,8 @@ function load_music(path){
 	var _file = buffer_load(path);
 	var _sample_rate = buffer_peek(_file, 24, buffer_u32);
 	var _audio_bits = buffer_peek(_file, 34, buffer_u16);
-	var _samples = (buffer_get_size(_file) - 44) div _audio_bits;
-	var _sound = audio_create_buffer_sound(_file, buffer_s16, _sample_rate, 44, _samples, audio_mono);
+	var _samples = (buffer_get_size(_file)) div _audio_bits;
+	var _sound = audio_create_buffer_sound(_file, buffer_s16, _sample_rate, 0, _samples, audio_stereo);
 	return new music(_file,_sound);
 }
 

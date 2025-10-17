@@ -5,6 +5,9 @@ function save_project(path,chebo_path,music_path){
 	var _zip = zip_create();
 	zip_add_file(_zip,"chebo.txt",chebo_path);
 	zip_add_file(_zip,"music.wav",music_path);
-	zip_save(_zip,path);
-	file_rename(path,string_copy(path,1,string_length(path)-4)+".chebo")
+	var _async = zip_save(_zip,path);
+	register_async(_async, self, function(){
+		file_rename(path,string_copy(path,1,string_length(path)-4)+".chebo")
+	});
+	return _async;
 }

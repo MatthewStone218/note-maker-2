@@ -14,6 +14,14 @@ function play_music(time = global.music_time){
 	}
 }
 
+function stop_music(){
+	if(audio_exists(global.music.sound)){
+		if(audio_is_playing(global.music.sound)){
+			audio_stop_sound(global.music.sound);
+		}
+	}
+}
+
 function set_music_position(time){
 	audio_sound_set_track_position(global.music.sound,global.music.chebo.prepare_time/1000000+global.music_time);
 }

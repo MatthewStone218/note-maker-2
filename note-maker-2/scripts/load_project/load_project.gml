@@ -13,10 +13,3 @@ function load_project(path){
 	global.chebo = json_parse(_str);
 	global.music = load_music(TEMP+"project/music.wav");
 }
-
-global.chebo = {
-	prepare_time: 2500000,
-	global_note_speed: 1,
-	note: [],
-};
-global.music = -1;

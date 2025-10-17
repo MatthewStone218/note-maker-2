@@ -3,5 +3,6 @@
 global.chebo = {
 	prepare_time: 2500000,
 	global_note_speed: 1,
+	bpm: [[0,0,1],120],
 	note: [],
 };
