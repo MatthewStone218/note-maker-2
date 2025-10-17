@@ -10,7 +10,7 @@ function play_music(time = global.music_time){
 			audio_stop_sound(global.music);
 		}
 		audio_play_sound(global.music,1,0,global.music_gain);
-		audio_sound_set_track_position(global.music,global.chebo.prepare_time/1000000+global.music_time);
+		set_music_position(global.music_time);
 	}
 }
 
@@ -23,5 +23,5 @@ function stop_music(){
 }
 
 function set_music_position(time){
-	audio_sound_set_track_position(global.music,global.chebo.prepare_time/1000000+global.music_time);
+	audio_sound_set_track_position(global.music,time);
 }
