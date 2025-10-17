@@ -9,7 +9,7 @@ function click(){
 	}
 	if(file_exists(_file)){
 		load_project(_file);
-		room_goto(rm_project);
+		room_goto(rm_editor);
 		return;
 	}
 	global.main_file_handling = true;

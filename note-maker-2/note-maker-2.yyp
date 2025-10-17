@@ -31,6 +31,7 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"default_chebo_text.txt","CopyToMask":-1,"filePath":"datafiles","name":"default_chebo_text.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"default_music.ogg","CopyToMask":-1,"filePath":"datafiles","name":"default_music.ogg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"default_music.wav","CopyToMask":-1,"filePath":"datafiles","name":"default_music.wav","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"WAD","CopyToMask":-1,"filePath":"datafiles","name":"WAD","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],

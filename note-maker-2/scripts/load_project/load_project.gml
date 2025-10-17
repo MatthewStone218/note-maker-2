@@ -1,7 +1,11 @@
 // v2.3.0에 대한 스크립트 어셋 변경됨 자세한 정보는
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 참조
 function load_project(path){
+	if(string_count(".chebo",path) != 1){
+		path += ".chebo";
+	}
 	directory_destroy(TEMP+"project");
+	directory_create(TEMP+"project");
 	if(global.music != -1){
 		audio_destroy_stream(global.music);
 	}
@@ -11,5 +15,5 @@ function load_project(path){
 	var _str = buffer_read(_buff,buffer_string);
 	buffer_delete(_buff);
 	global.chebo = json_parse(_str);
-	global.music = load_music(TEMP+"project/music.wav");
+	global.music = load_music(TEMP+"project/music.ogg");
 }
