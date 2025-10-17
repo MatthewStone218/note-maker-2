@@ -11,3 +11,15 @@ global.zoom = 1;
 global.editor_inved_y_goal = 0;
 global.editor_inved_y = 0;
 global.editor_div = 4;
+
+global.bpm_objs = [];
+
+for(var i = 0; i < array_length(global.chebo.bpm); i++){
+	array_push(global.bpm_objs,instance_create_depth(0,0,-100,obj_bpm));
+}
+
+global.bpm_objs[0].inited = true;
+global.bpm_objs[0]._i_ = 0;
+global.bpm_objs[0]._a_ = 0;
+global.bpm_objs[0]._b_ = 0;
+global.bpm_objs[0].first = true;
