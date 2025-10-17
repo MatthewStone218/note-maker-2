@@ -2,6 +2,6 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 global.chebo = {
 	global_note_speed: 1,
-	bpm: [[0,0,1],120],
+	bpm: [[120,0,0,4]],
 	note: [],
 };

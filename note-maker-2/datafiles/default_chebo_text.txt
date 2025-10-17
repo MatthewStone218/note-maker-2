@@ -1,1 +1,1 @@
-{ "global_note_speed":1, "bpm": [[0,0,1],120], "note":[] }
+{ "global_note_speed":1, "bpm": [[120,0,0,4]], "note":[] }

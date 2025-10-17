@@ -39,4 +39,4 @@ global.editor_inved_y = BEAT_GAP*_prev_pos_as_beat;
 global.editor_inved_y += (global.editor_inved_y_goal-global.editor_inved_y)/4;
 global.editor_inved_y = max(0,global.editor_inved_y);
 
-camera_set_view_pos(view_camera[0],0,-global.editor_inved_y);
+camera_set_view_pos(view_camera[0],0,round(-global.editor_inved_y));

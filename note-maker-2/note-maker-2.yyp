@@ -60,6 +60,7 @@
     {"id":{"name":"load_project","path":"scripts/load_project/load_project.yy",},},
     {"id":{"name":"register_async","path":"scripts/register_async/register_async.yy",},},
     {"id":{"name":"save_project","path":"scripts/save_project/save_project.yy",},},
+    {"id":{"name":"spr_bpm","path":"sprites/spr_bpm/spr_bpm.yy",},},
     {"id":{"name":"spr_dot","path":"sprites/spr_dot/spr_dot.yy",},},
     {"id":{"name":"spr_main_load_file_button","path":"sprites/spr_main_load_file_button/spr_main_load_file_button.yy",},},
     {"id":{"name":"spr_main_new_file_button","path":"sprites/spr_main_new_file_button/spr_main_new_file_button.yy",},},
