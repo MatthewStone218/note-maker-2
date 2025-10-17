@@ -12,10 +12,10 @@ if(keyboard_check_pressed(vk_space)){
 
 if(keyboard_check(vk_control)){
 	if(mouse_wheel_down()){
-		global.note_zoom_power--;
+		global.note_zoom_power++;
 	}
 	if(mouse_wheel_up()){
-		global.note_zoom_power++;
+		global.note_zoom_power--;
 	}	
 	
 	global.note_zoom_power = median(-5,5,global.note_zoom_power);
@@ -28,7 +28,11 @@ if(mouse_wheel_up()){
 	global.editor_inved_y_goal -= 100;
 }
 
+global.editor_inved_y_goal = max(0,global.editor_inved_y_goal);
+
 global.editor_inved_y += (global.editor_inved_y_goal-global.editor_inved_y)/4;
+
+global.editor_inved_y = max(0,global.editor_inved_y);
 
 var _beat_gap_prev = BEAT_GAP;
 global.zoom += (power(global.note_zoom_base,global.note_zoom_power) - global.zoom)/4;
