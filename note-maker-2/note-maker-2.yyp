@@ -42,6 +42,7 @@
   },
   "name":"note-maker-2",
   "resources":[
+    {"id":{"name":"ft_bpm","path":"fonts/ft_bpm/ft_bpm.yy",},},
     {"id":{"name":"obj_async_system","path":"objects/obj_async_system/obj_async_system.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_editor_system","path":"objects/obj_editor_system/obj_editor_system.yy",},},

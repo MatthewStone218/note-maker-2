@@ -1,10 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
-for(var i = 0; i < (1080 div BEAT_GAP)+1; i++){
-	var ii = (global.editor_inved_y div BEAT_GAP) + i;
-	draw_sprite_ext(spr_dot,0,0,global.note_hit_line_y-ii*BEAT_GAP,1920,1,0,c_white,1);
-	for(var a = 1; a < global.editor_div; a++){
-		draw_sprite_ext(spr_dot,0,0,global.note_hit_line_y-ii*BEAT_GAP-(BEAT_GAP/global.editor_div)*a,1920,1,0,#444444,1);
+
+var _beat_accumuled = 0;
+var _beat_mod = 0;
+
+for(var i = 0; i < array_length(global.chebo.bpm); i++){
+	var _break = false;
+	for(var ii = -5; ii < (1080 div BEAT_GAP)+1; ii++){
+		var a = (global.editor_inved_y div BEAT_GAP) + ii;
+		if(a < 0){
+			continue;
+		}
+		for(var iii = 0; iii < global.editor_div; iii++){
+			draw_sprite_ext(spr_dot,0,0,global.note_hit_line_y-a*BEAT_GAP-(BEAT_GAP/global.editor_div)*iii,1920,1,0,_beat_mod == iii? c_white : #444444,1);
+			_beat_accumuled += 1/global.editor_div;
+			if(_beat_accumuled >= global.chebo.bpm[i][1]+(global.chebo.bpm[i][2]/global.chebo.bpm[i][3])){
+				_beat_accumuled = 0;
+				_beat_mod = iii;
+				break;
+			}
+		}
+		if(_break){
+			break;
+		}
 	}
 }
 
