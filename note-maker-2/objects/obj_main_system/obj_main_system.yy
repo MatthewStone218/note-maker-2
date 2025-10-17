@@ -1,19 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_async_system",
+  "%Name":"obj_main_system",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":72,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_async_system",
+  "name":"obj_main_system",
   "overriddenProperties":[],
   "parent":{
     "name":"system",
     "path":"folders/Objects/system.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

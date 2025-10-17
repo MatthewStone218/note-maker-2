@@ -47,12 +47,13 @@
     {"id":{"name":"obj_main_load_file_button","path":"objects/obj_main_load_file_button/obj_main_load_file_button.yy",},},
     {"id":{"name":"obj_main_new_file_button","path":"objects/obj_main_new_file_button/obj_main_new_file_button.yy",},},
     {"id":{"name":"obj_main_quit_button","path":"objects/obj_main_quit_button/obj_main_quit_button.yy",},},
+    {"id":{"name":"obj_main_system","path":"objects/obj_main_system/obj_main_system.yy",},},
     {"id":{"name":"obj_music_system","path":"objects/obj_music_system/obj_music_system.yy",},},
     {"id":{"name":"obj_project_system","path":"objects/obj_project_system/obj_project_system.yy",},},
     {"id":{"name":"obj_system","path":"objects/obj_system/obj_system.yy",},},
+    {"id":{"name":"rm_editor","path":"rooms/rm_editor/rm_editor.yy",},},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
-    {"id":{"name":"rm_project","path":"rooms/rm_project/rm_project.yy",},},
     {"id":{"name":"create_project","path":"scripts/create_project/create_project.yy",},},
     {"id":{"name":"load_music","path":"scripts/load_music/load_music.yy",},},
     {"id":{"name":"load_project","path":"scripts/load_project/load_project.yy",},},
@@ -67,7 +68,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
-    {"roomId":{"name":"rm_project","path":"rooms/rm_project/rm_project.yy",},},
+    {"roomId":{"name":"rm_editor","path":"rooms/rm_editor/rm_editor.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

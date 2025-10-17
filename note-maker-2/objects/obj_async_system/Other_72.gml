@@ -2,11 +2,8 @@
 // You can write your code in this editor
 var _id = async_load[?"id"];
 var _idx = array_get_index(ids,_id);
-
-while(_idx >= 0){
-	with(callers[_idx]){
-		funcs[_idx]();
-	}
+while(_idx != -1){
+	method(callers[_idx],funcs[_idx])();
 	array_delete(ids,_idx,1);
 	array_delete(callers,_idx,1);
 	array_delete(funcs,_idx,1);

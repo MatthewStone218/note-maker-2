@@ -3,7 +3,7 @@
 function load_project(path){
 	directory_destroy(TEMP+"project");
 	if(global.music != -1){
-		global.music.free();
+		audio_destroy_stream(global.music);
 	}
 	file_copy(path,TEMP+"project/temp_project.zip");
 	zip_unzip(TEMP+"project/temp_project.zip",TEMP+"project");
