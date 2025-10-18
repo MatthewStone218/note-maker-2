@@ -42,15 +42,15 @@ if(!instance_exists(global.editing_obj)){
 
 if(mouse_check_button_pressed(mb_left) && mouse_x < 1400){
 	global.editing_obj = instance_create_depth(mouse_x < 675 ? 350 : 1000, -1000, 0, obj_note);
-	var _coord_1 = -floor((mouse_y+global.note_hit_line_y)/BEAT_GAP);
-	var _coord_2 = -floor(((mouse_y+global.note_hit_line_y) mod BEAT_GAP)/(BEAT_GAP/global.editor_div));
+	var _coord_1 = floor((global.note_hit_line_y-mouse_y)/BEAT_GAP);
+	var _coord_2 = floor(((global.note_hit_line_y-mouse_y) mod BEAT_GAP)/(BEAT_GAP/global.editor_div));
 	global.editing_obj.type = "short";
 	global.editing_obj.coord = [_coord_1,_coord_2,global.editor_div,_coord_1,_coord_2,global.editor_div];
 }
 
 if(mouse_check_button(mb_left) && instance_exists(global.editing_obj)){
-	var _coord_1 = -floor((mouse_y+global.note_hit_line_y)/BEAT_GAP);
-	var _coord_2 = -floor(((mouse_y+global.note_hit_line_y) mod BEAT_GAP)/(BEAT_GAP/global.editor_div));
+	var _coord_1 = floor((global.note_hit_line_y-mouse_y)/BEAT_GAP);
+	var _coord_2 = floor(((global.note_hit_line_y-mouse_y) mod BEAT_GAP)/(BEAT_GAP/global.editor_div));
 	if((_coord_1+(_coord_2/global.editor_div)) > (global.editing_obj.coord[0]+(global.editing_obj.coord[1]/global.editing_obj.coord[2]))){
 		global.editing_obj.type = "long";
 		global.editing_obj.coord = [_coord_1,_coord_2,global.editor_div,_coord_1,_coord_2,global.editor_div];
