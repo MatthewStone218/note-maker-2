@@ -36,6 +36,26 @@ if(keyboard_check_pressed(ord("2"))){
 }
 global.editor_div = max(1,global.editor_div);
 
+if(!instance_exists(global.editing_obj)){
+	global.editing_obj = noone;
+}
+
+if(mouse_check_button_pressed(mb_left) && mouse_x < 1400){
+	global.editing_obj = instance_create_depth(mouse_x < 675 ? 350 : 1000, -1000, 0, obj_note);
+	var _coord_1 = -floor((mouse_y+global.note_hit_line_y)/BEAT_GAP);
+	var _coord_2 = -floor(((mouse_y+global.note_hit_line_y) mod BEAT_GAP)/(BEAT_GAP/global.editor_div));
+	global.editing_obj.type = "short";
+	global.editing_obj.coord = [_coord_1,_coord_2,global.editor_div,_coord_1,_coord_2,global.editor_div];
+}
+
+if(mouse_check_button(mb_left) && instance_exists(global.editing_obj)){
+	
+}
+
+if(mouse_check_button_released(mb_left)){
+	global.editing_obj = noone;
+}
+
 global.editor_inved_y_goal = max(0,global.editor_inved_y_goal);
 
 var _prev_pos_as_beat_goal = global.editor_inved_y_goal/BEAT_GAP;

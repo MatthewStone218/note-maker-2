@@ -48,4 +48,5 @@ for(var i = 0; i < array_length(global.chebo.bpm); i++){
 	}
 }
 
+draw_sprite_ext(spr_dot,0,CM_X+1400,CM_Y,1,1080,0,c_white,1);
 draw_sprite_ext(spr_dot,0,CM_X,CM_Y+global.note_hit_line_y,1920,1,0,c_green,1);

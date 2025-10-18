@@ -14,6 +14,8 @@ global.editor_div = 4;
 
 global.bpm_objs = [];
 
+global.editing_obj = noone;
+
 for(var i = 0; i < array_length(global.chebo.bpm); i++){
 	array_push(global.bpm_objs,instance_create_depth(0,0,-100,obj_bpm));
 }
