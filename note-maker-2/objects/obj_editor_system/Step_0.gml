@@ -49,7 +49,17 @@ if(mouse_check_button_pressed(mb_left) && mouse_x < 1400){
 }
 
 if(mouse_check_button(mb_left) && instance_exists(global.editing_obj)){
-	
+	var _coord_1 = -floor((mouse_y+global.note_hit_line_y)/BEAT_GAP);
+	var _coord_2 = -floor(((mouse_y+global.note_hit_line_y) mod BEAT_GAP)/(BEAT_GAP/global.editor_div));
+	if((_coord_1+(_coord_2/global.editor_div)) > (global.editing_obj.coord[0]+(global.editing_obj.coord[1]/global.editing_obj.coord[2]))){
+		global.editing_obj.type = "long";
+		global.editing_obj.coord = [_coord_1,_coord_2,global.editor_div,_coord_1,_coord_2,global.editor_div];
+	} else {
+		global.editing_obj.type = "short";
+		global.editing_obj.coord[3] = global.editing_obj.coord[0];
+		global.editing_obj.coord[4] = global.editing_obj.coord[1];
+		global.editing_obj.coord[5] = global.editing_obj.coord[2];
+	}
 }
 
 if(mouse_check_button_released(mb_left)){
