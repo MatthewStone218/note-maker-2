@@ -23,3 +23,5 @@ global.bpm_objs[0]._i_ = 0;
 global.bpm_objs[0]._a_ = 0;
 global.bpm_objs[0]._b_ = 0;
 global.bpm_objs[0].first = true;
+
+window_set_fullscreen(true);

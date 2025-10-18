@@ -28,6 +28,14 @@ if(keyboard_check(vk_control)){
 	}
 }
 
+if(keyboard_check_pressed(ord("1"))){
+	global.editor_div--;
+}
+if(keyboard_check_pressed(ord("2"))){
+	global.editor_div++;
+}
+global.editor_div = max(1,global.editor_div);
+
 global.editor_inved_y_goal = max(0,global.editor_inved_y_goal);
 
 var _prev_pos_as_beat_goal = global.editor_inved_y_goal/BEAT_GAP;
